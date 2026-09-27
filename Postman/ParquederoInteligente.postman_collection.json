@@ -1,0 +1,218 @@
+{
+  "info": {
+    "_postman_id": "c04c7d33-beb4-44c7-90b3-1f75315d050c",
+    "name": "ParquederoInteligente",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56637168",
+    "_collection_link": "https://go.postman.co/collection/56637168-c04c7d33-beb4-44c7-90b3-1f75315d050c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "RegistrarAuto",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"placa\": \"ABC123\",\r\n    \"propietario\": \"Juan Perez\",\r\n    \"numeroPuertas\": 4\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/vehiculos/auto",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vehiculos",
+            "auto"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "RegistrarMotocicleta",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"placa\": \"MOT123\",\r\n\t\"propietario\": \"Maria Lopez\",\r\n\t\"cilindraje\": 300\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/vehiculos/moto",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vehiculos",
+            "moto"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ListarVehiculos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/vehiculos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vehiculos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "BuscarVehiculoPorPlaca",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/vehiculos/ABC123",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vehiculos",
+            "ABC123"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ProbarPlacaDuplicada",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"placa\": \"ABC123\",\r\n\t\"propietario\": \"Carlos Repetido\",\r\n\t\"numeroPuertas\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/vehiculos/auto",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vehiculos",
+            "auto"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ProcesarSalidaDeAutoConMasDe4Horas",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/cobros/procesar/ABC123/5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cobros",
+            "procesar",
+            "ABC123",
+            "5"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "VerificarQueElAutoYaNoEsteEnVehiculos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/vehiculos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vehiculos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ConsultarTotalRecaudado",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/cobros/total",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cobros",
+            "total"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ConsultarHistorialDeTickets",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/cobros/historial",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cobros",
+            "historial"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
